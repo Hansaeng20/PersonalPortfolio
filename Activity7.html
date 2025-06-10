@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Llanes-Activity7</title>
+    <link rel="icon" href="favicon (1).ico">
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        body {
+            background-color: var(--linkedin-gray-light);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .month-links-container {
+            background-color: var(--linkedin-white);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .month-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 0.5rem;
+        }
+        
+        .month-links a {
+            display: block;
+            padding: 0.5rem;
+            text-align: center;
+            background-color: #f3f2ef;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .month-links a:hover {
+            background-color: var(--linkedin-blue);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .holidays {
+            background-color: var(--linkedin-white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2rem;
+        }
+        
+        .holiday-month {
+            margin-bottom: 1.5rem;
+        }
+        
+        .holiday-month h3 {
+            color: var(--linkedin-blue);
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+        
+        button {
+            background-color: white;
+            color: var(--linkedin-blue);
+            border: 1px solid var(--linkedin-blue);
+            border-radius: 16px;
+            padding: 0.5rem 1rem;
+            margin: 0.25rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: var(--linkedin-blue);
+            color: white;
+        }
+        
+        table {
+            width: 100%;
+            margin: 2rem 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        caption h1 {
+            background-color: var(--linkedin-blue);
+            color: white;
+            padding: 1rem;
+            margin: 0;
+        }
+        
+        th {
+            background-color: #f3f2ef;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+        
+        col:first-child {
+            background-color: rgba(10, 102, 194, 0.1);
+        }
+        
+        col {
+            background-color: white;
+        }
+        
+        .button-home {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--linkedin-blue);
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .button-home:hover {
+            background-color: var(--linkedin-blue-dark);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+   <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Franz Llanes</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Activities</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Activity1.html">Eye of The Tiger</a></li>
+                        <li><a href="Activity2.html">Resume W/o List</a></li>
+                        <li><a href="Activity3.html">Resume W/ List</a></li>
+                        <li><a href="Activity4.html">Map Activity</a></li>
+                        <li><a href="Activity5.html">ColSpan,Rowspan & Forms</a></li>
+                        <li><a href="Activity6.html">Calendar Without Div</a></li>
+                        <li><a href="Activity7.html">Calendar With Div</a></li>
+                        <li><a href="Activity8.html">NU Quest</a></li>
+                        <li><a href="all-animations.html" target="_blank">Navigation, Animation, Transition</a></li>
+                        <li><a href="https://hansaeng20.github.io/Microsoftredesigned/" target="_blank">Group Project</a></li>
+                    </ul>
+                </li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+  
+    <!-- Description -->
+    <div class="page-header">
+        <div class="page-header-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <a href="#activities">Activities</a> > Calendar With Div
+            </div>
+            <h1>Philippine Calendar 2025 - Modern Layout</h1>
+        </div>
+         <div class="page-description">
+            <h3>About This Activity</h3>
+            <p>A calendar layout with national holidays using traditional HTML table structures with the use of div containers.</p>
+            <div class="meta-info">
+                <span>Focus: Designing of a webpage</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <h2>Welcome to the Calendar</h2>
+        <p>Choose a Month from the List Below</p>
+        
+        <div class="month-links-container">
+            <div class="month-links">
+                <a href="#January">January</a>
+                <a href="#February">February</a>
+                <a href="#March">March</a>
+                <a href="#April">April</a>
+                <a href="#May">May</a>
+                <a href="#June">June</a>
+                <a href="#July">July</a>
+                <a href="#August">August</a>
+                <a href="#September">September</a>
+                <a href="#October">October</a>
+                <a href="#November">November</a>
+                <a href="#December">December</a>
+            </div>
+        </div>
+        
+        <div class="holidays">
+            <h3>PH Holidays 2025</h3>
+            
+            <div class="holiday-month">
+                <h3>January</h3>
+                <a class="Holiday" href="#January"><button>New Years Day (Jan 1)</button></a>
+                <a class="Holiday" href="#January"><button>Lunar New Year (Jan 29)</button></a>
+            </div>
+            
+            <div class="holiday-month">
+                <h3>April</h3>
+                <a class="Holiday" href="#April"><button>Eid al-Fitr (Apr 10)</button></a>
+                <a class="Holiday" href="#April"><button>Day of Valor (Apr 9)</button></a>
+                <a class="Holiday" href="#April"><button>Maundy Thursday (Apr 17)</button></a>
+                <a class="Holiday" href="#April"><button>Good Friday (Apr 18)</button></a>
+                <a class="Holiday" href="#April"><button>Holy Saturday (Apr 19)</button></a>
+            </div>
+            
+            <div class="holiday-month">
+                <h3>May</h3>
+                <a class="Holiday" href="#May"><button>Labor Day (May 1)</button></a>
+            </div>
+            
+            <div class="holiday-month">
+                <h3>June</h3>
+                <a class="Holiday" href="#June"><button>Eid al-Adha (Jun 17)</button></a>
+                <a class="Holiday" href="#June"><button>Independence Day (Jun 12)</button></a>
+            </div>
+            
+            <div class="holiday-month">
+                <h3>August</h3>
+                <a class="Holiday" href="#August"><button>Ninoy Aquino Day (Aug 21)</button></a>
+                <a href="#August"><button>National Heroes Day (Aug 25)</button></a>
+            </div>
+            
+            <div class="holiday-month">
+                <h3>November</h3>
+                <a class="Holiday" href="#November"><button>All Saints Day (Nov 1)</button></a>
+                <a class="Holiday" href="#November"><button>Bonifacio Day (Nov 30)</button></a>
+            </div>
+            
+            <div class="holiday-month">
+                <h3>December</h3>
+                <a class="Holiday" href="#December"><button>Christmas Day (Dec 25)</button></a>
+                <a class="Holiday" href="#December"><button>Rizal Day (Dec 30)</button></a>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div class="calendar-grid">
+            <table id="January">
+                <caption><h1>January</h1></caption>
+                <colgroup>
+                    <col span="1">
+                    <col span="6">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+                    <tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
+                    <tr><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+                    <tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+                    <tr><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td></tr>
+                </tbody>
+            </table>
+            
+            <table id="February">
+                <caption><h1>February</h1></caption>
+                <colgroup>
+                    <col span="1">
+                    <col span="6">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
+                    <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+                    <tr><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+                    <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td></tr>
+                    <tr><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td></td></tr>
+                </tbody>
+            </table>
+            
+            <table id="March">
+                <caption><h1>March</h1></caption>
+                <colgroup>
+                    <col span="1">
+                    <col span="6">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
+                    <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+                    <tr><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+                    <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td></tr>
+                    <tr><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td></tr>
+                    <tr><td>30</td><td>31</td><td></td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+            
+            <table id="April">
+                <caption><h1>April</h1></caption>
+                <colgroup>
+                    <col span="1">
+                    <col span="6">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+                    <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+                    <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+                    <tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+                    <tr><td>27</td><td>28</td><td>29</td><td>30</td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+            
+            <table id="May">
+                <caption><h1>May</h1></caption>
+                <colgroup>
+                    <col span="1">
+                    <col span="6">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+                    <tr><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+                    <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+                    <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+                    <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+                </tbody>
+            </table>
+            
+            <table id="June">
+                <caption><h1>June</h1></caption>
+                <colgroup>
+                    <col span="1">
+                    <col span="6">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+                    <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td></tr>
+                    <tr><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td></tr>
+                    <tr><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td></tr>
+                    <tr><td>29</td><td>30</td><td></td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+            
+            <table id="July">
+                <caption><h1>July</h1></caption>
+                <colgroup>
+                    <col span="1">
+                    <col span="6">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+                    <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+                    <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+                    <tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+                    <tr><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td></tr>
+                </tbody>
+            </table>
+            
+            <table id="August">
+                <caption><h1>August</h1></caption>
+                <colgroup>
+                    <col span="1">
+                    <col span="6">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td>1</td><td>2</td></tr>
+                    <tr><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+                    <tr><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td></tr>
+                    <tr><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td></tr>
+                    <tr><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td></tr>
+                    <tr><td>31</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+            
+            <table id="September">
+                <caption><h1>September</h1></caption>
+                <colgroup>
+                    <col span="1">
+                    <col span="6">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                    <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
+                    <tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+                    <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td></tr>
+                    <tr><td>28</td><td>29</td><td>30</td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+            
+            <table id="October">
+                <caption><h1>October</h1></caption>
+                <colgroup>
+                    <col span="1">
+                    <col span="6">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+                    <tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
+                    <tr><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+                    <tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+                    <tr><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td></tr>
+                </tbody>
+            </table>
+            
+            <table id="November">
+                <caption><h1>November</h1></caption>
+                <colgroup>
+                    <col span="1">
+                    <col span="6">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
+                    <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+                    <tr><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+                    <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td></tr>
+                    <tr><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td></tr>
+                    <tr><td>30</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+            
+            <table id="December">
+                <caption><h1>December</h1></caption>
+                <colgroup>
+                    <col span="1">
+                    <col span="6">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                    <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
+                    <tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+                    <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td></tr>
+                    <tr><td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <script src="navbar-active.js"></script>
+</body>
+</html>

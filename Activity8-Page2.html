@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to National University</title>
+  <link rel="icon" href="favicon (1).ico">
+  <link rel="stylesheet" href="shared-styles.css">
+  <style>
+    body {
+      background-color: var(--linkedin-gray-light);
+      color: var(--linkedin-gray-dark);
+      padding-top: 60px;
+      margin: 0;
+    }
+
+    header {
+      background-color: white;
+      box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--linkedin-blue);
+    }
+
+    .nu-branding {
+      color: #021f54;
+      font-weight: 600;
+      border-left: 3px solid #fcd116;
+      padding-left: 1rem;
+      margin-left: 1rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--linkedin-gray-dark);
+      margin-bottom: 2rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--linkedin-blue);
+      color: white;
+      text-decoration: none;
+      border-radius: 24px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+      border: none;
+      cursor: pointer;
+      margin: 0 0.5rem;
+    }
+
+    .button:hover {
+      background-color: var(--linkedin-blue-dark);
+      text-decoration: none;
+    }
+
+    .button-home {
+      background-color: #021f54;
+    }
+
+    .button-home:hover {
+      background-color: #010e29;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      .button {
+        display: block;
+        margin: 1rem auto;
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <!-- Navigation -->
+   <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Franz Llanes</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Activities</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Activity1.html">Eye of The Tiger</a></li>
+                        <li><a href="Activity2.html">Resume W/o List</a></li>
+                        <li><a href="Activity3.html">Resume W/ List</a></li>
+                        <li><a href="Activity4.html">Map Activity</a></li>
+                        <li><a href="Activity5.html">ColSpan,Rowspan & Forms</a></li>
+                        <li><a href="Activity6.html">Calendar Without Div</a></li>
+                        <li><a href="Activity7.html">Calendar With Div</a></li>
+                        <li><a href="Activity8.html">NU Quest</a></li>
+                        <li><a href="all-animations.html" target="_blank">Navigation, Animation, Transition</a></li>
+                        <li><a href="https://hansaeng20.github.io/Microsoftredesigned/" target="_blank">Group Project</a></li>
+                    </ul>
+                </li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+   
+    <!-- Description -->
+    <div class="page-header">
+        <div class="page-header-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <a href="#activities">Activities</a> > <a href="Activity8.html">NU Quest</a> > Success Page
+            </div>
+            <h1>Application Submitted Successfully</h1>
+        </div>
+        <div class="page-description">
+            <h3>About This Page</h3>
+            <p>Confirmation page demonstrating successful form submission flow and user feedback.</p>
+            <div class="meta-info">
+                <span>Focus: Process of User Input</span>
+            </div>
+        </div>
+    </div>
+
+  
+  <div class="container">
+    <div class="card">
+      <h1>Welcome to National University</h1>
+      <a href="Activity8.html" class="button">Go Back</a>
+      <a href="index.html" class="button button-home">Back to Home</a>
+    </div>
+  </div>
+  <script src="navbar-active.js"></script>
+</body>
+</html>

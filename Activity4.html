@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Franz Romeo Isaac D. Llanes</title>
+            <link rel="icon" href="favicon (1).ico">
+            <link rel="stylesheet" href="shared-styles.css">
+            <style>
+                body {
+                    background-color: var(--linkedin-gray-light);
+                }
+                .cake-container {
+                    text-align: center;
+                    padding-top: 2rem;
+                }
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                }
+            </style>
+    </head>
+
+    <body>
+    <!-- Navigation -->
+   <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Franz Llanes</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Activities</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Activity1.html">Eye of The Tiger</a></li>
+                        <li><a href="Activity2.html">Resume W/o List</a></li>
+                        <li><a href="Activity3.html">Resume W/ List</a></li>
+                        <li><a href="Activity4.html">Map Activity</a></li>
+                        <li><a href="Activity5.html">ColSpan,Rowspan & Forms</a></li>
+                        <li><a href="Activity6.html">Calendar Without Div</a></li>
+                        <li><a href="Activity7.html">Calendar With Div</a></li>
+                        <li><a href="Activity8.html">NU Quest</a></li>
+                        <li><a href="all-animations.html" target="_blank">Navigation, Animation, Transition</a></li>
+                        <li><a href="https://hansaeng20.github.io/Microsoftredesigned/" target="_blank">Group Project</a></li>
+                    </ul>
+                </li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    
+    <!-- Description -->
+    <div class="page-header">
+        <div class="page-header-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <a href="#activities">Activities</a> > Image Map Activity
+            </div>
+            <h1>Image Mapping - Cake Selection</h1>
+        </div>
+        <div class="page-description">
+            <h3>About This Activity</h3>
+            <p>An interactive image map demonstration using HTML area elements and coordinate mapping.</p>
+            <div class="meta-info">
+                <span>Focus: Mapping</span>
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="cake-container">
+            <h1 class="cake-title">The Cake Selection</h1>
+            <h3 class="cake-subtitle">Select A Cake</h3>
+            <img src="image.jpg" alt="HolidayChocolateCake" usemap="#Cakes">
+
+            <map name="Cakes">
+                <area shape="poly" 
+                alt="HolidayChocolateCake" href="Activity4-Page2.html" coords="217,182,286,159,361,153,420,155,464,157,520,165,568,191,565,228,565,266,563,303,548,340,478,357,406,363,333,359,258,353,217,325">
+        
+                <area shape="poly" alt="Apple Berry Crumble Cake" href="Activity4-Page3.html" 
+                coords="592,430,727,445,764,455,808,483,809,555,840,583,846,614,837,644,803,669,743,686,686,698,607,701,512,697,421,681,372,654,349,605,381,564,387,533,385,497,427,458,470,442">
+
+                <area shape="poly" alt="Triple Chocolate Cake" title="" href="Activity4-Page4.html" 
+                coords="904,229,989,239,1033,253,1068,277,1074,320,1075,351,1107,383,1096,411,1052,431,977,456,948,454,875,454,795,447,732,416,705,392,708,359,728,337,727,305,727,274,749,253,811,231">
+
+                <area shape="poly" alt="Coffee" href="Activity4-Page5.html" 
+                coords="1003,458,1053,446,1107,456,1111,482,1134,498,1139,525,1124,546,1103,557,1089,587,1076,603,1036,603,1014,601,1009,571,998,497">
+            </map>
+        </div>
+    
+    <script src="navbar-active.js"></script>
+    </body>
+</html>

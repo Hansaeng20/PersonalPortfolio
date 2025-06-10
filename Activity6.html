@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Llanes-Activity6</title>
+        <link rel="icon" href="favicon (1).ico">
+        <link rel="stylesheet" href="shared-styles.css">
+        <style>
+            body {
+                background-color: var(--linkedin-gray-light);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                padding: 2rem;
+            }
+            .calendar-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 2rem;
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+            }
+            .month-links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                margin-bottom: 2rem;
+            }
+            .month-link {
+                padding: 0.5rem 1rem;
+                background-color: #f3f2ef;
+                border-radius: 4px;
+                color: var(--linkedin-blue);
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+            .month-link:hover {
+                background-color: var(--linkedin-blue);
+                color: white;
+            }
+            .holiday-buttons {
+                margin: 1rem 0 2rem 0;
+            }
+            button {
+                margin: 0.25rem;
+                background-color: white;
+                color: var(--linkedin-blue);
+                border: 1px solid var(--linkedin-blue);
+            }
+            button:hover {
+                background-color: var(--linkedin-blue);
+                color: white;
+            }
+            table {
+                margin: 2rem 0;
+            }
+            th, td {
+                padding: 10px 50px;
+                text-align: center;
+            }
+            caption h1 {
+                margin: 1rem 0;
+                color: var(--linkedin-blue);
+            }
+            .holiday-note {
+                margin: 1rem 0 3rem 0;
+                color: var(--linkedin-gray);
+            }
+        </style>
+    </head>
+    <body>
+    <!-- Navigation -->
+   <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Franz Llanes</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Activities</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Activity1.html">Eye of The Tiger</a></li>
+                        <li><a href="Activity2.html">Resume W/o List</a></li>
+                        <li><a href="Activity3.html">Resume W/ List</a></li>
+                        <li><a href="Activity4.html">Map Activity</a></li>
+                        <li><a href="Activity5.html">ColSpan,Rowspan & Forms</a></li>
+                        <li><a href="Activity6.html">Calendar Without Div</a></li>
+                        <li><a href="Activity7.html">Calendar With Div</a></li>
+                        <li><a href="Activity8.html">NU Quest</a></li>
+                        <li><a href="all-animations.html" target="_blank">Navigation, Animation, Transition</a></li>
+                        <li><a href="https://hansaeng20.github.io/Microsoftredesigned/" target="_blank">Group Project</a></li>
+                    </ul>
+                </li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+  
+    <!-- Description -->
+    <div class="page-header">
+        <div class="page-header-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <a href="#activities">Activities</a> > Calendar Without Div
+            </div>
+            <h1>Philippine Calendar 2025 - Traditional Layout</h1>
+        </div>
+        <div class="page-description">
+            <h3>About This Activity</h3>
+            <p>A calendar layout with national holidays using traditional HTML table structures without div containers.</p>
+            <div class="meta-info">
+                <span>Focus: Designing of a webpage</span>
+            </div>
+        </div>
+    </div>
+
+        <div class="calendar-container">
+            <h2>Welcome to the Calendar</h2>
+            <p>Choose a Month from the List Below</p>
+
+            <div class="month-links">
+                <a href="#January" class="month-link">January</a>
+                <a href="#February" class="month-link">February</a>
+                <a href="#March" class="month-link">March</a>
+                <a href="#April" class="month-link">April</a>
+                <a href="#May" class="month-link">May</a>
+                <a href="#June" class="month-link">June</a>
+                <a href="#July" class="month-link">July</a>
+                <a href="#August" class="month-link">August</a>
+                <a href="#September" class="month-link">September</a>
+                <a href="#October" class="month-link">October</a>
+                <a href="#November" class="month-link">November</a>
+                <a href="#December" class="month-link">December</a>
+            </div>
+                
+            <h3>PH Holidays 2025</h3>
+
+            <div class="holiday-buttons">
+                <h3>January</h3>
+                <a class="Holiday" href="#January"><button>New Years Day</button></a>
+                <a class="Holiday" href="#January"><button>Lunar New Year</button></a>
+                
+                <h3>April</h3>
+                <a class="Holiday" href="#April"><button>Eid al-Fitr</button></a> 
+                <a class="Holiday" href="#April"><button>Day of Valor</button></a> 
+                <a class="Holiday" href="#April"><button>Maundy Thursday</button></a> 
+                <a class="Holiday" href="#April"><button>Good Friday</button></a> 
+                <a class="Holiday" href="#April"><button>Holy Saturday</button></a>
+              
+                <h3>May</h3>
+                <a class="Holiday" href="#May"><button>Labor day</button></a>
+               
+                <h3>June</h3>
+                <a class="Holiday" href="#June"><button>Eid al-adha</button></a>
+                <a class="Holiday" href="#June"><button>Independence Day</button></a>
+          
+                <h3>August</h3>
+                <a class="Holiday" href="#August"><button>Ninoy Aguino day</button></a>
+                <a href="#August"><button>National Heroes Day</button></a>
+            
+                <h3>November</h3>
+                <a class="Holiday" href="#November"><button>All Saints day</button></a>
+                <a class="Holiday" href="#November"><button>Bonifacio</button></a>
+                
+                <h3>December</h3>
+                <a class="Holiday" href="#December"><button>Christmas Day</button></a> 
+                <a class="Holiday" href="#December"><button>Rizal Day</button></a>
+            </div>
+                    
+            <hr>
+
+            <table id="January" width="80%" height="1000%">
+                <caption>
+                    <h1>January</h1>
+                </caption>
+
+                <colgroup>
+                    <col span="1" style="background-color: rgb(204, 156, 156);">
+                    <col span="6" style="background-color: rgb(228, 235, 236);">
+                </colgroup>
+
+                <thead>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                    </tr>
+
+                    <tr>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                    </tr>
+
+                    <tr>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="holiday-note">
+                <h3>New Years Day = Jan 9 <br>
+                Lunar New year = Jan 29</h3>
+            </div>
+
+            <center>
+        <table id="February" width="80%" height="1000%" >
+            <caption>
+                <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">February</h1>
+            </caption>
+
+            <colgroup>
+                <col span="1" style="background-color: rgb(204, 156, 156);">
+                <col span="6" style="background-color: rgb(228, 235, 236);">
+            </colgroup>
+
+            <thead>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                </tr>
+
+
+                <tr>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                </tr>
+
+                <tr>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                </tr>
+
+                <tr>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </center>
+    <br>
+    <br>
+    <br>
+    <center>
+        <table id="March" width="80%" height="1000%" >
+            <caption>
+                <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">March</h1>
+            </caption>
+
+            <colgroup>
+                <col span="1" style="background-color: rgb(204, 156, 156);">
+                <col span="6" style="background-color: rgb(228, 235, 236);">
+            </colgroup>
+
+            <thead>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                </tr>
+
+
+                <tr>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                </tr>
+
+                <tr>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                </tr>
+
+                <tr>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>31</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </center>
+    <br>
+    <br>
+    <br>
+    <center>
+        <table id="April" width="80%" height="1000%" >
+            <caption>
+                <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">April</h1>
+            </caption>
+
+            <colgroup>
+                <col span="1" style="background-color: rgb(204, 156, 156);">
+                <col span="6" style="background-color: rgb(228, 235, 236);">
+            </colgroup>
+
+            <thead>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+
+
+                <tr>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                </tr>
+
+                <tr>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                </tr>
+
+                <tr>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+      
+    </center>
+      <h3>Eid il-Fitr = Apr 1 <br>
+            Day of Valor =  Apr 9<br>
+            Maundy Thursday = Apr 17 <br>
+            Good Friday = Apr 18 <br>
+            Holy Saturday = Apr 19</h3>
+            <br>
+            <br>
+            <br>
+    <center>
+        <table id="May" width="80%" height="1000%" >
+            <caption>
+                <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">May</h1>
+            </caption>
+
+            <colgroup>
+                <col span="1" style="background-color: rgb(204, 156, 156);">
+                <col span="6" style="background-color: rgb(228, 235, 236);">
+            </colgroup>
+
+            <thead>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                </tr>
+
+
+                <tr>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                </tr>
+
+                <tr>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                </tr>
+
+                <tr>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                </tr>
+
+            </tbody>
+        </table>
+    
+    </center>
+        <h3>Labor Day = May 1 </h3>
+        <br>
+        <br>
+        <br>
+    <center>
+        <table id="June" width="80%" height="1000%" >
+            <caption>
+                <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">June</h1>
+            </caption>
+
+            <colgroup>
+                <col span="1" style="background-color: rgb(204, 156, 156);">
+                <col span="6" style="background-color: rgb(228, 235, 236);">
+            </colgroup>
+
+            <thead>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                </tr>
+
+
+                <tr>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                </tr>
+
+                <tr>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                </tr>
+
+                <tr>
+                    <td>29</td>
+                    <td>30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+      
+    </center>
+      <h3>Eid Al-adha June 6-7 <br>
+            Independence Day = June 12</h3>
+            <br>
+            <br>
+            <br>
+    <center>
+        <table id="July" width="80%" height="1000%" >
+            <caption>
+                <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">July</h1>
+            </caption>
+
+            <colgroup>
+                <col span="1" style="background-color: rgb(204, 156, 156);">
+                <col span="6" style="background-color: rgb(228, 235, 236);">
+            </colgroup>
+
+            <thead>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+
+
+                <tr>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                </tr>
+
+                <tr>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                </tr>
+
+                <tr>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </center>
+    <br>
+    <br>
+    <br>
+    <center>
+        <table id="August" width="80%" height="1000%" >
+            <caption>
+                <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">August</h1>
+            </caption>
+
+            <colgroup>
+                <col span="1" style="background-color: rgb(204, 156, 156);">
+                <col span="6" style="background-color: rgb(228, 235, 236);">
+            </colgroup>
+
+            <thead>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+
+
+                <tr>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                </tr>
+
+                <tr>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                </tr>
+
+                <tr>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+       
+    </center>
+     <h3>Ninoy Aquino Day = Aug 21 <br>
+            National Heroes Day = Aug 25</h3>
+            <br>
+            <br>
+            <br>
+    <center>
+        <table id="September" width="80%" height="1000%" >
+            <caption>
+                <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">September</h1>
+            </caption>
+
+            <colgroup>
+                <col span="1" style="background-color: rgb(204, 156, 156);">
+                <col span="6" style="background-color: rgb(228, 235, 236);">
+            </colgroup>
+
+            <thead>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                </tr>
+
+
+                <tr>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                </tr>
+
+                <tr>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                </tr>
+
+                <tr>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </center>
+    <br>
+    <br>
+    <br>
+    <center>
+        <table id="October" width="80%" height="1000%" >
+            <caption>
+                <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">October</h1>
+            </caption>
+
+            <colgroup>
+                <col span="1" style="background-color: rgb(204, 156, 156);">
+                <col span="6" style="background-color: rgb(228, 235, 236);">
+            </colgroup>
+
+            <thead>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+
+
+                <tr>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                </tr>
+
+                <tr>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                </tr>
+
+                <tr>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </center>
+    <br>
+    <br>
+    <br>
+    <center>
+        <table id="November" width="80%" height="1000%" >
+            <caption>
+                <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">November</h1>
+            </caption>
+
+            <colgroup>
+                <col span="1" style="background-color: rgb(204, 156, 156);">
+                <col span="6" style="background-color: rgb(228, 235, 236);">
+            </colgroup>
+
+            <thead>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                </tr>
+
+
+                <tr>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                </tr>
+
+                <tr>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                </tr>
+
+                <tr>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+        
+    </center>
+    <h3>All Saints Day = Nov 1 <br> 
+            Bonifacio Day = Nov 30</h3>
+            <br>
+            <br>
+            <br>
+
+    <center>
+        <table id="December" width="80%" height="1000%" >
+            <caption>
+                <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">December</h1>
+            </caption>
+
+            <colgroup>
+                <col span="1" style="background-color: rgb(204, 156, 156);">
+                <col span="6" style="background-color: rgb(228, 235, 236);">
+            </colgroup>
+
+            <thead>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                </tr>
+
+
+                <tr>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                </tr>
+
+                <tr>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                </tr>
+
+                <tr>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+      
+    </center>
+      <h3>Christmas Day = Dec 25 <br>
+            Feast of the Immaculate Conception = Dec 8  <br>
+            Rizal Day = Dec 30 <br>
+            New Years Eve = Dec 31
+      </h3>
+    </div>
+    <script src="navbar-active.js"></script>
+    </body> 
+</html>

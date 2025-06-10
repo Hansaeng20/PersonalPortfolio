@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NU Quest - Online Application Form</title>
+  <link rel="icon" href="favicon (1).ico">
+  <link rel="stylesheet" href="shared-styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--linkedin-gray-light);
+      color: var(--linkedin-gray-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+    }
+
+    header {
+      background-color: white;
+      box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--linkedin-blue);
+    }
+
+    .nu-branding {
+      color: #021f54;
+      font-weight: 600;
+      border-left: 3px solid #fcd116;
+      padding-left: 1rem;
+      margin-left: 1rem;
+    }
+
+    main {
+      flex: 1;
+      padding-top: 5rem;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+
+    .left-sidebar {
+      width: 225px;
+      flex-shrink: 0;
+    }
+
+    .right-sidebar {
+      width: 300px;
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      max-width: 800px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .card-header {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+
+    .card-header h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--linkedin-gray-dark);
+      margin: 0;
+    }
+
+    .card-body {
+      padding: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--linkedin-gray);
+      margin-bottom: 0.25rem;
+    }
+
+    select, input[type="text"], 
+    input[type="date"], input[type="email"], 
+    input[type="tel"], textarea {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      background-color: white;
+      transition: border-color 0.2s;
+    }
+
+    select:focus, input:focus, textarea:focus {
+      border-color: var(--linkedin-blue);
+      box-shadow: 0 0 0 1px var(--linkedin-blue);
+      outline: none;
+    }
+
+    .form-buttons {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+
+    input[type="submit"], input[type="reset"], .submit-button {
+      flex: 1;
+      padding: 0.75rem 1.5rem;
+      border-radius: 24px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      font-size: 1rem;
+      transition: background-color 0.2s;
+      text-align: center;
+    }
+
+    input[type="submit"], .submit-button {
+      background-color: var(--linkedin-blue);
+      color: white;
+      text-decoration: none;
+    }
+
+    input[type="submit"]:hover, .submit-button:hover {
+      background-color: var(--linkedin-blue-dark);
+    }
+
+    input[type="reset"] {
+      background-color: transparent;
+      color: var(--linkedin-blue);
+      box-shadow: inset 0 0 0 1px var(--linkedin-blue);
+    }
+
+    input[type="reset"]:hover {
+      background-color: rgba(10,102,194,0.1);
+    }
+
+    .privacy-label {
+      font-weight: normal;
+      font-size: 0.875rem;
+      color: var(--linkedin-gray);
+      margin-top: 0.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    input[type="checkbox"] {
+      margin-top: 0.25rem;
+    }
+
+    .reminder-card {
+      background-color: #e3f0ff;
+      border-left: 4px solid var(--linkedin-blue);
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .reminder-text {
+      font-size: 0.875rem;
+      color: var(--linkedin-gray);
+      margin: 0;
+    }
+
+    footer {
+      background-color: white;
+      padding: 1rem;
+      text-align: center;
+      border-top: 1px solid rgba(0,0,0,.1);
+      font-size: 0.875rem;
+      color: var(--linkedin-gray);
+    }
+
+    optgroup {
+      font-weight: 600;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid rgba(0,0,0,.1);
+      margin: 1rem 0;
+    }
+
+    .button-home {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 24px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      font-size: 1rem;
+      transition: background-color 0.2s;
+      background-color: #fcd116;
+      color: #021f54;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+
+    .button-home:hover {
+      background-color: #e6b800;
+      text-decoration: none;
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left-sidebar, .right-sidebar {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+   <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Franz Llanes</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" class="active">Activities</a>
+                    <ul class="dropdown-menu">
+                         <li><a href="Activity1.html">Eye of The Tiger</a></li>
+                        <li><a href="Activity2.html">Resume W/o List</a></li>
+                        <li><a href="Activity3.html">Resume W/ List</a></li>
+                        <li><a href="Activity4.html">Map Activity</a></li>
+                        <li><a href="Activity5.html">ColSpan,Rowspan & Forms</a></li>
+                        <li><a href="Activity6.html">Calendar Without Div</a></li>
+                        <li><a href="Activity7.html">Calendar With Div</a></li>
+                        <li><a href="Activity8.html">NU Quest</a></li>
+                        <li><a href="all-animations.html" target="_blank">Navigation, Animation, Transition</a></li>
+                        <li><a href="https://hansaeng20.github.io/Microsoftredesigned/" target="_blank">Group Project</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Description -->
+    <div class="page-header">
+        <div class="page-header-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <a href="#activities">Activities</a> > NU Quest Application
+            </div>
+            <h1>NU Quest - Online Application System</h1>
+        </div>
+        <div class="page-description">
+            <h3>About This Activity</h3>
+            <p>A comprehensive university application form system featuring multi-step forms, validation, dropdown selections, and professional layout design. Demonstrates advanced form handling and user experience principles.</p>
+            <div class="meta-info">
+                <span>Focus: User Interface as well as Form Creation</span>
+            </div>
+        </div>
+    </div>
+
+  
+  <main>
+    <div class="container">
+      <div class="left-sidebar">
+        <div class="card">
+          <div class="card-body">
+            <div style="text-align: center; padding: 1rem;">
+              <div style="font-size: 0.875rem; color: var(--linkedin-gray);">NU Quest Application</div>
+              <div style="font-weight: 600; margin-top: 0.5rem;">Online Application Form</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="reminder-card">
+          <p class="reminder-text">Please provide your correct and complete information. Fields marked with an asterisk (*) are required.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2>Application Term & Course/Strand</h2>
+          </div>
+          <div class="card-body">
+            <form action="Activity8-Page2.html" method="POST">
+              <div class="form-group">
+                <label for="campus">Campus: *</label>
+                <select id="campus" name="campus" required>
+                  <option value=""></option>
+                  <optgroup label="Choose a campus"> 
+                    <option value="NU Manila">NU Manila</option>
+                    <option value="NU Fairview">NU Fairview</option>
+                    <option value="NU MOA">NU MOA</option>
+                    <option value="NU East Ortigas">NU East Ortigas</option>
+                    <option value="NU Las Piñas">NU Las Piñas</option>
+                    <option value="NU Baliwag">NU Baliwag</option>
+                    <option value="NU Clark">NU Clark</option>
+                    <option value="NU Laguna">NU Laguna</option>
+                    <option value="NU Dasmariñas">NU Dasmariñas</option>
+                    <option value="NU Lipa">NU Lipa</option>
+                    <option value="NU Bacolod">NU Bacolod</option>
+                    <option value="NU Cebu">NU Cebu</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="academic_year">Academic Year: *</label>
+                <select id="academic_year" name="academic_year" required>
+                  <option value=""></option>
+                  <optgroup label="Select an academic year">
+                    <option value="2025 - 2026">2025 - 2026</option>
+                    <option value="2026 - 2027">2026 - 2027</option>
+                    <option value="2027 - 2028">2027 - 2028</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="academic_term">Academic Term: *</label>
+                <select id="academic_term" name="academic_term" required>
+                  <option value=""></option>
+                  <optgroup label="Select an academic term">
+                    <option value="1st">1st</option>
+                    <option value="2nd">2nd</option>
+                    <option value="3rd">3rd</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="applying_for">Applying For: *</label>
+                <select id="applying_for" name="applying_for" required>
+                  <option value=""></option>
+                  <optgroup label="Select your application type">
+                    <option value="Grade 11">Grade 11</option>
+                    <option value="Grade 12">Grade 12</option>
+                    <option value="Freshman">Freshman</option>
+                    <option value="Transferee">Transferee</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="academic_program">Academic Program: *</label>
+                <select id="academic_program" name="academic_program" required>
+                  <option value=""></option>
+                  <optgroup label="College Programs">
+                    <option value="BSIT major in MWA">BS Information Technology (BSIT) Major in Mobile and Web Applications</option>
+                    <option value="BSBA major in Marketing Management">BS Business Administration (BSBA) Major in Marketing Management</option>
+                    <option value="BSA">BS Accountancy (BS ACC)</option>
+                    <option value="BS Psychology">BS Psychology (BS PSYCH)</option>
+                    <option value="BS Tourism Management">BS Tourism Management (BSTM)</option>
+                    <option value="BS Communications">BA Communications (BA COMM)</option>
+                    <option value="BS Political Science">BA Political Science (BA POLSCI)</option>
+                    <option value="BS Architecture">BS Architecture (BS ARCHI)</option>
+                    <option value="BS Civil Engineering">BS Civil Engineering (BS CIV ENG)</option>
+                    <option value="BS Computer Engineering">BS Computer Engineering (BS COMP ENG)</option>
+                    <option value="BS Medical Technology">BS Medical Technology (BS MEDTECH)</option>
+                    <option value="BS Management Accounting">BS Management Accounting (BS MAN ACC)</option>
+                  </optgroup>
+                  <optgroup label="Senior High School Strands">
+                    <option value="HUMSS">HUMSS (Humanities and Social Sciences)</option>
+                    <option value="STEM">STEM (Science, Technology, Engineering, Mathematics)</option>
+                    <option value="ABM">ABM (Accountancy, Business Management)</option>
+                  </optgroup>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2>Basic Information</h2>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="first_name">First Name: *</label>
+                <input type="text" id="first_name" name="first_name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="middle_name">Middle Name:</label>
+                <input type="text" id="middle_name" name="middle_name">
+              </div>
+
+              <div class="form-group">
+                <label for="last_name">Last Name: *</label>
+                <input type="text" id="last_name" name="last_name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="birthdate">Date of Birth: *</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address: *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="mobile">Mobile No.: *</label>
+                <input type="tel" id="mobile" name="mobile" required>
+              </div>
+
+              <div class="form-group">
+                <label for="nationality">Nationality: *</label>
+                <select id="nationality" name="nationality" required>
+                  <optgroup label="Select your nationality">
+                    <option value="Filipino">Filipino</option>
+                    <option value="Afghan">Afghan</option>
+                    <option value="Albanian">Albanian</option>
+                    <option value="Algerian">Algerian</option>
+                    <option value="American">American</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="privacy_agreement" class="privacy-label">
+                  <input type="checkbox" id="privacy_agreement" name="privacy_agreement" required>
+                  I hereby authorize National University to retain, process, disseminate, and use for research purposes all the personal data that I provided. I understand and give consent to National University to use this information to communicate with me either electronically, via mail, or other means.
+                </label>
+              </div>
+
+              <div class="form-buttons">
+                <a href="Activity8-Page2.html" class="submit-button">Create Account</a>
+                <input type="reset" value="Cancel">
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="right-sidebar">
+        <div class="card">
+          <div class="card-header">
+            <h2>Application Tips</h2>
+          </div>
+          <div class="card-body">
+            <div style="font-size: 0.875rem; color: var(--linkedin-gray);">
+              <p>• Double-check all information before submitting</p>
+              <p>• Use your personal email address</p>
+              <p>• Ensure your mobile number is active</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 National University. All rights reserved.</p>
+  </footer>
+
+  <script src="navbar-active.js"></script>
+</body>
+</html>

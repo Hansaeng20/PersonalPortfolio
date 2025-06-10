@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Franz Romeo Isaad D. Llanes</title>
+        <link rel="icon" href="favicon (1).ico">
+        <link rel="stylesheet" href="shared-styles.css">
+        <style>
+            body {
+                background-color: var(--linkedin-gray-light);
+                padding: 2rem;
+            }
+            .tables-container {
+                max-width: 800px;
+                margin: 0 auto 2rem auto;
+                padding: 2rem;
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+                text-align: center;
+            }
+            .form-container {
+                max-width: 800px;
+                margin: 2rem auto;
+                padding: 2rem;
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+            }
+            table {
+                margin: 1.5rem auto;
+            }
+            caption {
+                margin-bottom: 1rem;
+                font-weight: 600;
+                color: var(--linkedin-blue);
+            }
+            h3 {
+                color: var(--linkedin-blue);
+                margin-top: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+   <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Franz Llanes</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Activities</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Activity1.html">Eye of The Tiger</a></li>
+                        <li><a href="Activity2.html">Resume W/o List</a></li>
+                        <li><a href="Activity3.html">Resume W/ List</a></li>
+                        <li><a href="Activity4.html">Map Activity</a></li>
+                        <li><a href="Activity5.html">ColSpan,Rowspan & Forms</a></li>
+                        <li><a href="Activity6.html">Calendar Without Div</a></li>
+                        <li><a href="Activity7.html">Calendar With Div</a></li>
+                        <li><a href="Activity8.html">NU Quest</a></li>
+                        <li><a href="all-animations.html" target="_blank">Navigation, Animation, Transition</a></li>
+                        <li><a href="https://hansaeng20.github.io/Microsoftredesigned/" target="_blank">Group Project</a></li>
+                    </ul>
+                </li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Description -->
+    <div class="page-header">
+        <div class="page-header-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <a href="#activities">Activities</a> > Colspan, Rowspan, & Forms
+            </div>
+            <h1>Advanced Tables & Form Elements</h1>
+        </div>
+        <div class="page-description">
+            <h3>About This Activity</h3>
+            <p>Modification of an HTML table structures using colspan and rowspan attributes, with form elements including radio buttons, checkboxes, etc.</p>
+            <div class="meta-info">
+                <span>📊 Activity Type: Tables & Forms</span>
+                <span>🔧 Focus: HTML Structure</span>
+            </div>
+        </div>
+    </div>
+
+        <div class="tables-container">
+            <h3>Item #1</h3>
+
+            <table border="1" width="50%" height="100%">
+                <caption>Table Number 1</caption>
+                <tr>
+                    <td colspan="3">1</td>
+                    <td rowspan="2">2</td>
+                    <td rowspan="2">3</td>            
+                </tr>
+                <tr>
+                    <td rowspan="2">4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td colspan="3">7</td>
+                    <td>8</tdd>
+                </tr>
+            </table>
+
+            <h3>Item #2</h3>
+            <table border="1" width="50%" height="100%">
+                <caption>Table Number 2</caption>
+                <tr>
+                    <td>1</td>
+                    <td colspan="4">2</td>
+                    <td>3</td>           
+                </tr>
+                <tr>
+                    <td rowspan="2">4</td>
+                    <td>5</td>
+                    <td rowspan="2">6</td>
+                    <td colspan="2">7</td>
+                    <td rowspan="2">8</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td colspan="2">10</td>
+                </tr>
+                <tr>               
+                    <td colspan="2">11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                </tr>
+            </table>
+
+            <h3>Item #3</h3>
+            <table border="1" width="50%" height="100%">
+                <caption>Table Number 3</caption>
+                <tr>
+                    <td>1</td>
+                    <td rowspan="4">2</td>
+                    <td rowspan="8">3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">7</td>
+                    <td rowspan="3">8</td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td colspan="2">9</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">13</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="form-container">
+            <h3>User Registration Form</h3>
+            <form>  
+                <div class="form-group">
+                    <label for="username">Username: </label>
+                    <input type="text" id="username" name="username">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Email: </label>
+                    <input type="text" id="password" name="password">
+                </div>
+
+                <div class="form-group">
+                    <p>Gender: </p>
+                    <div>
+                        <input type="radio" id="gender1" name="gender" value="Male">
+                        <label for="gender1">Male</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="gender2" name="gender" value="Female">
+                        <label for="gender2">Female</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="gender3" name="gender" value="Others">
+                        <label for="gender3">Others</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <p>Hobby:</p>
+                    <div>
+                        <input type="checkbox" id="hobby1" name="Fav_Hobby" value="Reading">
+                        <label for="hobby1">Reading</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="hobby2" name="Fav_Hobby" value="Traveling">
+                        <label for="hobby2">Traveling</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="hobby3" name="Fav_Hobby" value="Cooking">
+                        <label for="hobby3">Cooking</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="hobby4" name="Fav_Hobby" value="Sports">
+                        <label for="hobby4">Sports</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Countries">Country:</label>
+                    <input list="Countries" name="Countries">
+                    
+                    <datalist id="Countries">
+                        <option value="Philippines"></option>
+                        <option value="United Kingdom"></option>
+                        <option value="United States"></option>
+                        <option value="South Korea"></option>
+                    </datalist>
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    <script src="navbar-active.js"></script>
+    </body>
+</html>

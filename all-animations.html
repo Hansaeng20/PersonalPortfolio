@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>All Animations</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="Animation-Styles.css">
+<link rel="icon" href="favicon (1).ico">
+<script src="script.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Franz Llanes</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" class="active">Activities</a>
+                    <ul class="dropdown-menu">
+                         <li><a href="Activity1.html">Eye of The Tiger</a></li>
+                        <li><a href="Activity2.html">Resume W/o List</a></li>
+                        <li><a href="Activity3.html">Resume W/ List</a></li>
+                        <li><a href="Activity4.html">Map Activity</a></li>
+                        <li><a href="Activity5.html">ColSpan,Rowspan & Forms</a></li>
+                        <li><a href="Activity6.html">Calendar Without Div</a></li>
+                        <li><a href="Activity7.html">Calendar With Div</a></li>
+                        <li><a href="Activity8.html">NU Quest</a></li>
+                        <li><a href="all-animations.html" target="_blank">Navigation, Animation, Transition</a></li>
+                        <li><a href="https://hansaeng20.github.io/Microsoftredesigned/" target="_blank">Group Project</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
+    <nav class="bookmark-nav-vertical">
+      <a href="#navbar">Navbar</a>
+      <a href="#webfont">Web Font</a>
+      <a href="#transform">2D Transform</a>
+      <a href="#translate">Translate Method</a>
+      
+      <div class="nav-section-title">Transitions</div>
+      <a href="#transition1">Transition 1</a>
+      <a href="#transition2">Transition 2</a>
+      <a href="#transition3">Transition 3</a>
+      <a href="#transition4">Transition 4</a>
+      
+      <div class="nav-section-title">Animations</div>
+      <a href="#animation1">Animation 1</a>
+      <a href="#animation2">Animation 2</a>
+      <a href="#animation3">Animation 3</a>
+      <a href="#animation4">Animation 4</a>
+      <a href="#animation5">Animation 5</a>
+      <a href="#animation6">Animation 6</a>
+      <a href="#animation7">Animation 7</a>
+      <a href="#animation8">Animation 8</a>
+      <a href="#animation9">Animation 9</a>
+      <a href="#animation10">Animation 10</a>
+    </nav>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="content-area">
+    <h1>CSS Animations & Transforms Showcase</h1>
+
+    <!-- Navigation Bar Section -->
+    <section id="navbar">
+      <h2>Navigation Bar</h2>
+      <div class="demo-content">
+        <h3>Fixed Full-height Side Nav</h3>
+        <p>Try to scroll this area, and see how the sidenav sticks to the page</p>
+        <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+        <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+      </div>
+    </section>
+
+    <!-- Web Font Section -->
+    <section id="webfont">
+      <h2>Web Font</h2>
+      <div class="demo-content web-font-content">
+        <h3>The @font-face Rule</h3>
+        <div>
+          With CSS, websites can use <b>fonts other than the pre-selected "web-safe" fonts</b>.
+        </div>
+      </div>
+    </section>
+
+    <!-- 2D Transform Section -->
+    <section id="transform">
+      <h2>2D Transform</h2>
+      <div class="demo-content">
+        <h3>Fixed Full-height Side Nav</h3>
+        <p>Try to scroll this area, and see how the sidenav sticks to the page</p>
+        <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+        <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+        <p><a href="#transition1"><button>Next Transition</button></a></p>
+      </div>
+    </section>
+
+    <!-- Translate Method Section -->
+    <section id="translate">
+      <h2>Translate Method</h2>
+      <div class="demo-content">
+        <h3>The translate() Method</h3>
+        <p>The translate() method moves an element from its current position:</p>
+        <div class="transform-translate">
+          This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+        </div>
+      </div>
+    </section>
+
+    <!-- Transition Sections -->
+    <section id="transition1">
+      <h2>Transition 1</h2>
+      <div class="demo-content">
+        <h3>CSS Transition - Width</h3>
+        <p>Hover over the div element below, to see the transition effect:</p>
+        <div class="transition-box transition-width"></div>
+        <p><a href="#transition2"><button>Next Transition</button></a></p>
+      </div>
+    </section>
+
+    <section id="transition2">
+      <h2>Transition 2</h2>
+      <div class="demo-content">
+        <h3>CSS Transition: Width and Height</h3>
+        <p>This box transitions both <strong>width</strong> and <strong>height</strong> when hovered.</p>
+        <div class="transition-box transition-width-height transition-box-height"></div>
+        <p><b>Note:</b> You can combine multiple properties in a single transition declaration.</p>
+        <p><a href="#transition3"><button>Next Transition</button></a></p>
+      </div>
+    </section>
+
+    <section id="transition3">
+      <h2>Transition 3</h2>
+      <div class="demo-content">
+        <h3>CSS Transition with Delay</h3>
+        <p>Hover over the div element below, to see the transition effect:</p>
+        <div class="transition-box transition-delay"></div>
+        <p><b>Note:</b> The transition effect has a 1 second delay before starting.</p>
+        <p><a href="#transition4"><button>Next Transition</button></a></p>
+      </div>
+    </section>
+
+    <section id="transition4">
+      <h2>Transition 4</h2>
+      <div class="demo-content">
+        <h3>Transition + Transform</h3>
+        <p>Hover over the div element below:</p>
+        <div class="transition-box transition-transform transition-rotate"></div>
+        <p><a href="#animation1"><button>Go to Animations</button></a></p>
+      </div>
+    </section>
+
+    <!-- Animation Sections -->
+    <section id="animation1">
+      <h2>Animation 1</h2>
+      <div class="demo-content">
+        <h3>CSS Animation - Basic Color Change</h3>
+        <div class="animated-box animate-basic">Basic</div>
+        <p>This animation demonstrates a simple color transition from red to yellow.</p>
+        <button onclick="location.href='#animation2'">Next Animation</button>
+      </div>
+    </section>
+
+    <section id="animation2">
+      <h2>Animation 2</h2>
+      <div class="demo-content">
+        <h3>CSS Animation - Multi-Color</h3>
+        <div class="animated-box animate-multi-color">Multi-Color</div>
+        <p>This animation cycles through multiple colors: red, yellow, blue, and green.</p>
+        <button onclick="location.href='#animation3'">Next Animation</button>
+      </div>
+    </section>
+
+    <section id="animation3">
+      <h2>Animation 3</h2>
+      <div class="demo-content">
+        <h3>CSS Animation - Movement</h3>
+        <div class="animated-box animate-movement">Movement</div>
+        <p>This animation combines color changes with position movement in a square pattern.</p>
+        <button onclick="location.href='#animation4'">Next Animation</button>
+      </div>
+    </section>
+
+    <section id="animation4">
+      <h2>Animation 4</h2>
+      <div class="demo-content">
+        <h3>CSS Animation - With Delay</h3>
+        <div class="animated-box animate-movement animate-delay">Delayed</div>
+        <p>This animation has a 2-second delay before starting.</p>
+        <button onclick="location.href='#animation5'">Next Animation</button>
+      </div>
+    </section>
+
+    <section id="animation5">
+      <h2>Animation 5</h2>
+      <div class="demo-content">
+        <h3>CSS Animation - Limited Iterations</h3>
+        <div class="animated-box animate-movement animate-iteration-3">3x Only</div>
+        <p>This animation runs exactly 3 times and then stops.</p>
+        <button onclick="location.href='#animation6'">Next Animation</button>
+      </div>
+    </section>
+
+    <section id="animation6">
+      <h2>Animation 6</h2>
+      <div class="demo-content">
+        <h3>CSS Animation - Infinite Loop</h3>
+        <div class="animated-box animate-movement animate-infinite">Infinite</div>
+        <p>This animation runs continuously in an infinite loop.</p>
+        <button onclick="location.href='#animation7'">Next Animation</button>
+      </div>
+    </section>
+
+    <section id="animation7">
+      <h2>Animation 7</h2>
+      <div class="demo-content">
+        <h3>CSS Animation - Timing Functions</h3>
+        <div class="animated-box-small animate-timing-linear animate-fill-forwards">linear</div>
+        <div class="animated-box-small animate-timing-ease animate-fill-forwards">ease</div>
+        <div class="animated-box-small animate-timing-ease-in animate-fill-forwards">ease-in</div>
+        <div class="animated-box-small animate-timing-ease-out animate-fill-forwards">ease-out</div>
+        <div class="animated-box-small animate-timing-ease-in-out animate-fill-forwards">ease-in-out</div>
+        <p>These animations demonstrate different timing functions for smoother motion.</p>
+        <button onclick="location.href='#animation8'">Next Animation</button>
+      </div>
+    </section>
+
+    <section id="animation8">
+      <h2>Animation 8</h2>
+      <div class="demo-content">
+        <h3>CSS Animation - Complex Properties</h3>
+        <div class="animated-box animate-complex">Complex</div>
+        <p>This animation uses multiple properties: timing function, delay, infinite iterations, and alternate direction.</p>
+        <button onclick="location.href='#animation9'">Next Animation</button>
+      </div>
+    </section>
+
+    <section id="animation9">
+      <h2>Animation 9</h2>
+      <div class="demo-content">
+        <h3>CSS Animation - Individual Properties</h3>
+        <div class="animated-box animate-complex">Individual</div>
+        <p>This animation demonstrates setting animation properties individually rather than using shorthand.</p>
+        <button onclick="location.href='#animation10'">Next Animation</button>
+      </div>
+    </section>
+
+    <section id="animation10">
+      <h2>Animation 10</h2>
+      <div class="demo-content">
+        <h3>CSS Animation - Shorthand Syntax</h3>
+        <div class="animated-box animate-shorthand">Shorthand</div>
+        <p>This animation uses the shorthand syntax to define all animation properties in one line.</p>
+        <button onclick="location.href='#navbar'">Back to Top</button>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
