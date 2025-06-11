@@ -88,12 +88,14 @@ body {
   transition: all 0.3s ease;
   z-index: 1001;
   list-style: none;
+  display: none;
 }
 
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  display: block;
 }
 
 .dropdown-menu li {
@@ -105,11 +107,34 @@ body {
   padding: 0.75rem 1rem;
   color: var(--linkedin-gray-dark);
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .dropdown-menu a:hover {
   background-color: rgba(10, 102, 194, 0.1);
+  color: var(--linkedin-blue);
+}
+
+/* Active state for dropdown items */
+.dropdown-menu a.active {
+  background-color: rgba(10, 102, 194, 0.1);
+  color: var(--linkedin-blue);
+  font-weight: 600;
+}
+
+.dropdown-menu a.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--linkedin-blue);
+}
+
+/* Active state for dropdown toggle when any dropdown item is active */
+.dropdown.active .dropdown-toggle {
   color: var(--linkedin-blue);
 }
 
@@ -408,18 +433,16 @@ button:hover {
 
 /* Keep all existing animation classes exactly as they are */
 .animate-basic {
-  animation-name: example;
-  animation-duration: 4s;
+  animation: example 4s infinite;
 }
 
 .animate-multi-color {
-  animation-name: example-multi-color;
-  animation-duration: 4s;
+  animation: example-multi-color 4s infinite;
 }
 
 .animate-movement {
-  animation-name: example-movement;
-  animation-duration: 4s;
+  animation: example-movement 4s infinite;
+  position: relative;
 }
 
 .animate-delay {
