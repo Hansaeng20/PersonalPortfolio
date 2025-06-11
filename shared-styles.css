@@ -68,18 +68,20 @@ body {
   color: var(--linkedin-gray-dark);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
+  display: block;
 }
 
 .nav-links a:hover {
   color: var(--linkedin-blue);
 }
 
-/* Active state with underline */
+/* Active state with prominent underline */
 .nav-links a.active {
   color: var(--linkedin-blue);
+  font-weight: 600;
 }
 
 .nav-links a.active::after {
@@ -88,9 +90,23 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   background-color: var(--linkedin-blue);
-  border-radius: 1px;
+  border-radius: 2px;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+    left: 50%;
+    right: 50%;
+  }
+  to {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
 }
 
 /* Hover underline effect for non-active links */
@@ -147,8 +163,9 @@ body {
   padding: 0.75rem 1rem;
   color: var(--linkedin-gray-dark);
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
+  font-weight: 500;
 }
 
 .dropdown-menu a:hover {
@@ -156,9 +173,9 @@ body {
   color: var(--linkedin-blue);
 }
 
-/* Active state for dropdown items */
+/* Active state for dropdown items with left border and background */
 .dropdown-menu a.active {
-  background-color: rgba(10, 102, 194, 0.1);
+  background-color: rgba(10, 102, 194, 0.15);
   color: var(--linkedin-blue);
   font-weight: 600;
 }
@@ -169,8 +186,18 @@ body {
   left: 0;
   top: 0;
   bottom: 0;
-  width: 3px;
+  width: 4px;
   background-color: var(--linkedin-blue);
+}
+
+/* Active state for dropdown toggle when any dropdown item is active */
+.dropdown.active .dropdown-toggle {
+  color: var(--linkedin-blue);
+  font-weight: 600;
+}
+
+.dropdown.active .dropdown-toggle::after {
+  color: var(--linkedin-blue);
 }
 
 /* Add a visual indicator for the dropdown toggle */
