@@ -25,23 +25,35 @@ document.addEventListener("DOMContentLoaded", () => {
   // Get the section for current page
   const currentSection = pageMapping[currentPage] || "home"
 
-  // Remove active class from all nav links
+  // Remove active class from all nav links and dropdowns
   const navLinks = document.querySelectorAll(".nav-links a")
+  const dropdowns = document.querySelectorAll(".nav-links .dropdown")
+
   navLinks.forEach((link) => {
     link.classList.remove("active")
+  })
+
+  dropdowns.forEach((dropdown) => {
+    dropdown.classList.remove("active")
   })
 
   // Add active class to current section
   if (currentSection === "home") {
     // For index.html, set active based on hash or default to home
     const hash = window.location.hash.substring(1) || "home"
-    const homeNavLink = document.querySelector(`a[href="#${hash}"]`) || document.querySelector('a[href="#home"]')
+    const homeNavLink =
+      document.querySelector(`a[href="index.html#${hash}"]`) || document.querySelector('a[href="index.html#home"]')
     if (homeNavLink) {
       homeNavLink.classList.add("active")
     }
   } else if (currentSection === "activities") {
     // For activity pages, mark Activities dropdown as active
+    const activitiesDropdown = document.querySelector(".dropdown")
     const activitiesLink = document.querySelector(".dropdown-toggle")
+
+    if (activitiesDropdown) {
+      activitiesDropdown.classList.add("active")
+    }
     if (activitiesLink) {
       activitiesLink.classList.add("active")
     }
@@ -64,8 +76,14 @@ document.addEventListener("DOMContentLoaded", () => {
         link.classList.remove("active")
       })
 
+      // Remove active from dropdown
+      const dropdown = document.querySelector(".nav-links .dropdown")
+      if (dropdown) {
+        dropdown.classList.remove("active")
+      }
+
       // Add active to current section
-      const currentNavLink = document.querySelector(`a[href="#${hash}"]`)
+      const currentNavLink = document.querySelector(`a[href="index.html#${hash}"]`)
       if (currentNavLink && !currentNavLink.classList.contains("dropdown-toggle")) {
         currentNavLink.classList.add("active")
       }
@@ -86,14 +104,20 @@ document.addEventListener("DOMContentLoaded", () => {
         })
 
         if (current) {
-          // Remove active from all main nav links
+          // Remove active from all main nav links and dropdown
           const mainNavLinks = document.querySelectorAll(".nav-links > li > a:not(.dropdown-toggle)")
+          const dropdown = document.querySelector(".nav-links .dropdown")
+
           mainNavLinks.forEach((link) => {
             link.classList.remove("active")
           })
 
+          if (dropdown) {
+            dropdown.classList.remove("active")
+          }
+
           // Add active to current section
-          const currentNavLink = document.querySelector(`a[href="#${current}"]`)
+          const currentNavLink = document.querySelector(`a[href="index.html#${current}"]`)
           if (currentNavLink && !currentNavLink.classList.contains("dropdown-toggle")) {
             currentNavLink.classList.add("active")
           }
@@ -129,4 +153,33 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   }
+
+  // Add click handlers for immediate visual feedback
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      // Don't interfere with dropdown toggle
+      if (link.classList.contains("dropdown-toggle")) {
+        return
+      }
+
+      // Remove active from all links
+      navLinks.forEach((l) => l.classList.remove("active"))
+      dropdowns.forEach((d) => d.classList.remove("active"))
+
+      // Add active to clicked link
+      link.classList.add("active")
+
+      // If it's a dropdown item, also activate the dropdown
+      if (link.closest(".dropdown-menu")) {
+        const parentDropdown = link.closest(".dropdown")
+        const dropdownToggle = parentDropdown.querySelector(".dropdown-toggle")
+        if (parentDropdown) {
+          parentDropdown.classList.add("active")
+        }
+        if (dropdownToggle) {
+          dropdownToggle.classList.add("active")
+        }
+      }
+    })
+  })
 })
